@@ -1,0 +1,51 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+function Hello() {
+  return <span > Hello < /span>;
+}
+
+function World() {
+  return <span > World!!!! < /span>;
+}
+
+function HelloWorld() {
+  return ( <
+    div >
+    <
+    Hello / > < World / >
+    <
+    /div>
+  )
+}
+
+function NameCells() {
+  return ( <
+    React.Fragment > { /*this is a comment*/ } <
+    td > First Name < /td> <
+    td > Last Name < /td> < /
+    React.Fragment >
+  );
+}
+
+function Comments() {
+  var isValid = true;
+  return ( <
+    span > { /*this is a comment*/ } {
+      isValid && 'valid'
+    } {
+      !isValid && 'not valid'
+    } {
+      // Double slash comments are 
+      // OK in multi-line blocks
+    } {
+      /*
+               <span>One</span>
+               <span>Two</span>
+           */
+    } <
+    /span>
+  )
+}
+
+ReactDOM.render( < NameCells / > , document.getElementById('root'));
